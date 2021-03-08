@@ -51,3 +51,10 @@ function mouseDragged(){
 function mouseReleased(){
   slingshot.fly();
 }
+
+function keyPressed(){
+  if(keyCode === 32){
+    Matter.Body.setPosition(polygon.body,{x:200,y:200});
+    slingshot.attach(polygon.body);
+  }
+}
